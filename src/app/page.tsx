@@ -9,7 +9,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden">
       <HeroSection />
       
-      <div className="relative">
+      <div className="relative z-20 bg-white">
         <ParallaxAsset 
           src="/images/assets/spa-icon1.png" 
           className="top-20 left-10 w-24 h-24 opacity-20 z-0"
@@ -26,7 +26,7 @@ export default function Home() {
         <DealsSection />
       </div>
 
-      <section className="relative py-20 bg-gradient-to-b from-white to-blue-50">
+      <section className="relative z-20 py-20 bg-gradient-to-b from-white to-blue-50">
         <ParallaxAsset 
           src="/images/assets/water-drop.png" 
           className="top-10 left-1/2 w-16 h-16 opacity-25"
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-blue-900 text-white py-12">
+      <footer className="relative z-20 bg-blue-900 text-white py-12">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold mb-4">Monster Spa Sale</h3>
           <p className="mb-8">Contact us today for the best deals on spas and hot tubs!</p>

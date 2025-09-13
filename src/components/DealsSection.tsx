@@ -2,7 +2,8 @@
 
 import DealCard from './DealCard';
 import ParallaxAsset from './ParallaxAsset';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const deals = [
   {
@@ -56,8 +57,19 @@ const deals = [
 ];
 
 export default function DealsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "center center"]
+  });
+  
+  // Witch flies from left to right across the heading
+  const witchX = useTransform(scrollYProgress, [0, 1], ['-100px', 'calc(100% + 100px)']);
+  const witchY = useTransform(scrollYProgress, [0, 0.5, 1], ['0px', '-20px', '0px']);
+  
   return (
-    <section className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
       <ParallaxAsset 
         src="/images/assets/bubble1.png" 
         className="top-10 left-10 w-20 h-20 opacity-30"
