@@ -7,7 +7,7 @@ import { useRef } from 'react';
 
 const deals = [
   {
-    title: "Hot Tub Deluxe",
+    title: "Carribean Breeze",
     description: "Premium 6-person hot tub with LED lights and jets",
     discount: "40% OFF",
     price: "$3,999",
@@ -15,7 +15,7 @@ const deals = [
     image: "/images/deals/hottub1.jpg"
   },
   {
-    title: "Infinity Spa",
+    title: "Summit Spa",
     description: "Luxury 8-person spa with waterfall feature",
     discount: "35% OFF",
     price: "$5,499",
@@ -23,36 +23,12 @@ const deals = [
     image: "/images/deals/spa1.jpg"
   },
   {
-    title: "Compact Oasis",
+    title: "Epic Spa",
     description: "Perfect 4-person spa for smaller spaces",
     discount: "50% OFF",
     price: "$2,499",
     originalPrice: "$4,998",
     image: "/images/deals/compact1.jpg"
-  },
-  {
-    title: "Executive Suite Spa",
-    description: "Top-tier 10-person spa with advanced features",
-    discount: "30% OFF",
-    price: "$7,999",
-    originalPrice: "$11,427",
-    image: "/images/deals/executive1.jpg"
-  },
-  {
-    title: "Therapeutic Pro",
-    description: "Medical-grade therapy jets for ultimate relaxation",
-    discount: "45% OFF",
-    price: "$4,799",
-    originalPrice: "$8,725",
-    image: "/images/deals/therapy1.jpg"
-  },
-  {
-    title: "Family Fun Spa",
-    description: "Spacious 7-person spa perfect for families",
-    discount: "38% OFF",
-    price: "$4,299",
-    originalPrice: "$6,935",
-    image: "/images/deals/family1.jpg"
   }
 ];
 
@@ -97,7 +73,7 @@ export default function DealsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4">
-            <span className="text-blue-600">Unbeatable</span> Spa Deals
+            <span className="text-blue-600">Unbeatable</span> <span className="text-gray-600">Spa Deals</span>
           </h2>
           <p className="text-xl text-gray-600">Limited time offers on premium spas and hot tubs</p>
         </motion.div>
@@ -116,14 +92,7 @@ export default function DealsSection() {
           className="mt-16 text-center bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 rounded-2xl"
         >
           <h3 className="text-3xl font-bold mb-4">Limited Time Only!</h3>
-          <p className="text-xl mb-6">Sale ends soon - Don't miss out on these incredible savings!</p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white text-red-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
-          >
-            View All Deals
-          </motion.button>
+          <p className="text-xl mb-2">Sale ends soon - Don't miss out on these incredible savings!</p>
         </motion.div>
       </div>
     </section>

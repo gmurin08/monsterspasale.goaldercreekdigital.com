@@ -130,7 +130,7 @@ export default function HeroSection() {
             <img
               src="/images/assets/monster.png"
               alt="Monster"
-              className="w-auto h-auto max-w-[90%] drop-shadow-2xl"
+              className="w-auto h-auto max-w-[90%] md:max-w-[45%] lg:max-w-[40%] drop-shadow-2xl"
             />
           </motion.div>
 

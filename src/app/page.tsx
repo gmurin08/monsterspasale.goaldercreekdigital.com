@@ -1,13 +1,16 @@
 'use client';
 
+import TopBar from '@/components/TopBar';
 import HeroSection from '@/components/HeroSection';
 import DealsSection from '@/components/DealsSection';
 import ParallaxAsset from '@/components/ParallaxAsset';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
-      <HeroSection />
+    <>
+      <TopBar />
+      <main className="relative min-h-screen overflow-x-hidden pt-16">
+        <HeroSection />
       
       <div className="relative z-20 bg-white">
         <ParallaxAsset 
@@ -35,21 +38,21 @@ export default function Home() {
         />
         
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Our Spas?</h2>
+          <h2 className="text-4xl font-bold text-gray-600 mb-8">Why Choose Our Spas?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="text-5xl mb-4">🏆</div>
-              <h3 className="text-xl font-bold mb-2">Premium Quality</h3>
+              <h3 className="text-xl font-bold text-gray-600 mb-2">Premium Quality</h3>
               <p className="text-gray-600">Top-rated brands with warranties</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="text-5xl mb-4">🚚</div>
-              <h3 className="text-xl font-bold mb-2">Free Delivery</h3>
+              <h3 className="text-xl font-bold text-gray-600 mb-2">Free Delivery</h3>
               <p className="text-gray-600">Professional installation included</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="text-5xl mb-4">💰</div>
-              <h3 className="text-xl font-bold mb-2">Best Prices</h3>
+              <h3 className="text-xl font-bold text-gray-600 mb-2">Best Prices</h3>
               <p className="text-gray-600">Guaranteed lowest prices in town</p>
             </div>
           </div>
@@ -62,15 +65,16 @@ export default function Home() {
           <p className="mb-8">Contact us today for the best deals on spas and hot tubs!</p>
           <div className="flex justify-center gap-8 mb-8">
             <a href="tel:1-800-SPA-SALE" className="hover:text-yellow-400 transition-colors">
-              📞 1-800-SPA-SALE
+              📞 724-873-7665
             </a>
             <a href="mailto:info@monsterssale.com" className="hover:text-yellow-400 transition-colors">
-              ✉️ info@monstersale.com
+              📞 412-494-7665
             </a>
           </div>
-          <p className="text-sm opacity-75">© 2024 Monster Spa Sale. All rights reserved.</p>
+          <p className="text-sm opacity-75">© 2025 Pool & Spa Outlet. All rights reserved.</p>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
