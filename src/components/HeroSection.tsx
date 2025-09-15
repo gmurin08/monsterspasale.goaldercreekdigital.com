@@ -6,7 +6,6 @@ import { useRef, useEffect, useState } from 'react';
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [animationComplete, setAnimationComplete] = useState(false);
   const [isClient, setIsClient] = useState(false);
   
   const { scrollYProgress } = useScroll({
@@ -50,18 +49,9 @@ export default function HeroSection() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     
-    // Check if animation is complete
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
-      if (latest >= 0.75) {
-        setAnimationComplete(true);
-      } else {
-        setAnimationComplete(false);
-      }
-    });
     
     return () => {
       window.removeEventListener('resize', checkMobile);
-      unsubscribe();
     };
   }, [scrollYProgress]);
 

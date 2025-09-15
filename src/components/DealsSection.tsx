@@ -2,7 +2,7 @@
 
 import DealCard from './DealCard';
 import ParallaxAsset from './ParallaxAsset';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 const deals = [
@@ -34,15 +34,6 @@ const deals = [
 
 export default function DealsSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "center center"]
-  });
-  
-  // Witch flies from left to right across the heading
-  const witchX = useTransform(scrollYProgress, [0, 1], ['-100px', 'calc(100% + 100px)']);
-  const witchY = useTransform(scrollYProgress, [0, 0.5, 1], ['0px', '-20px', '0px']);
   
   return (
     <section ref={sectionRef} className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
@@ -92,7 +83,7 @@ export default function DealsSection() {
           className="mt-16 text-center bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 rounded-2xl"
         >
           <h3 className="text-3xl font-bold mb-4">Limited Time Only!</h3>
-          <p className="text-xl mb-2">Sale ends soon - Don't miss out on these incredible savings!</p>
+          <p className="text-xl mb-2">Sale ends soon - Don&apos;t miss out on these incredible savings!</p>
         </motion.div>
       </div>
     </section>
