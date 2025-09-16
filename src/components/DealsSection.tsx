@@ -1,36 +1,8 @@
 'use client';
 
-import DealCard from './DealCard';
 import ParallaxAsset from './ParallaxAsset';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-
-const deals = [
-  {
-    title: "Carribean Breeze",
-    description: "Premium 6-person hot tub with LED lights and jets",
-    discount: "40% OFF",
-    price: "$3,999",
-    originalPrice: "$6,665",
-    image: "/images/deals/hottub1.jpg"
-  },
-  {
-    title: "Summit Spa",
-    description: "Luxury 8-person spa with waterfall feature",
-    discount: "35% OFF",
-    price: "$5,499",
-    originalPrice: "$8,460",
-    image: "/images/deals/spa1.jpg"
-  },
-  {
-    title: "Epic Spa",
-    description: "Perfect 4-person spa for smaller spaces",
-    discount: "50% OFF",
-    price: "$2,499",
-    originalPrice: "$4,998",
-    image: "/images/deals/compact1.jpg"
-  }
-];
 
 export default function DealsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -64,26 +36,82 @@ export default function DealsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4">
-            <span className="text-blue-600">Unbeatable</span> <span className="text-gray-600">Spa Deals</span>
+            <span className="text-blue-600">Best Prices</span> <span className="text-gray-600">of the Season!</span>
           </h2>
-          <p className="text-xl text-gray-600">Limited time offers on premium spas and hot tubs</p>
+          <p className="text-xl text-gray-600">The Monster Spa Sale is Here!</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {deals.map((deal, index) => (
-            <DealCard key={index} {...deal} index={index} />
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center mb-16"
+        >
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 className="text-3xl font-bold text-blue-600 mb-6">Unbeatable Savings on Premium Spas & Hot Tubs</h3>
+            <p className="text-lg text-gray-700 mb-4">
+              Experience the ultimate relaxation with our Monster Spa Sale featuring the season&apos;s lowest prices on our entire inventory of premium spas and hot tubs. From compact models perfect for intimate spaces to luxury 8-person spas with advanced jet systems and LED lighting, we have the perfect spa for your lifestyle and budget.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Don&apos;t wait - these incredible prices won&apos;t last long! Our expert team is ready to help you find the perfect spa to transform your backyard into a personal oasis.
+            </p>
+            
+            <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 rounded-xl mb-6">
+              <p className="text-2xl font-bold mb-2">Save Up to 50% OFF Select Models!</p>
+              <p className="text-lg">Limited Time Only - While Supplies Last</p>
+            </div>
+
+            <p className="text-lg text-gray-700 mb-6">
+              Visit <a href="https://pool-spaoutlet.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold hover:text-blue-700 underline">pool-spaoutlet.com</a> to explore our full selection of spas, hot tubs, and accessories. Our knowledgeable staff can help you choose the perfect model with features like hydrotherapy jets, energy-efficient heating, and smart controls.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h4 className="text-2xl font-bold text-blue-600 mb-4">North Fayette Location</h4>
+            <div className="text-gray-700">
+              <p className="mb-2">Visit our North Fayette showroom to see our spas in person!</p>
+              <p className="text-sm text-gray-600 mt-3">
+                Call or visit for exact address and hours
+              </p>
+              <a href="https://pool-spaoutlet.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Directions
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h4 className="text-2xl font-bold text-blue-600 mb-4">Peters Township Location</h4>
+            <div className="text-gray-700">
+              <p className="mb-2">Experience luxury spas at our Peters Township showroom!</p>
+              <p className="text-sm text-gray-600 mt-3">
+                Call or visit for exact address and hours
+              </p>
+              <a href="https://pool-spaoutlet.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
           className="mt-16 text-center bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 rounded-2xl"
         >
-          <h3 className="text-3xl font-bold mb-4">Limited Time Only!</h3>
-          <p className="text-xl mb-2">Sale ends soon - Don&apos;t miss out on these incredible savings!</p>
+          <h3 className="text-3xl font-bold mb-4">Hurry In Today!</h3>
+          <p className="text-xl mb-4">The Monster Spa Sale won&apos;t last forever!</p>
+          <p className="text-lg">Visit pool-spaoutlet.com or stop by our showrooms to take advantage of the best spa prices of the season.</p>
         </motion.div>
       </div>
     </section>
