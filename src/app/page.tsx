@@ -37,8 +37,37 @@ export default function Home() {
           rotate={true}
         />
         
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-600 mb-8">Why Choose Our Spas?</h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-gray-600 mb-8 text-center">Get Your Free Quote!</h2>
+          
+          <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl mb-12">
+            <div 
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/fMp3CjKajBRmzFuDm2FT"
+                    style="width:100%;height:694px;border:none;border-radius:0px"
+                    id="inline-fMp3CjKajBRmzFuDm2FT" 
+                    data-layout=\'{"id":"INLINE"}\'
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Monster Spa Form"
+                    data-height="694"
+                    data-layout-iframe-id="inline-fMp3CjKajBRmzFuDm2FT"
+                    data-form-id="fMp3CjKajBRmzFuDm2FT"
+                    title="Monster Spa Form"
+                  >
+                  </iframe>
+                `
+              }}
+            />
+          </div>
+
+          <h2 className="text-4xl font-bold text-gray-600 mb-8 text-center">Why Choose Our Spas?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="text-5xl mb-4">🏆</div>
